@@ -36,6 +36,7 @@ Primeros comandos
 |cd          |Change Directory Te mueve a la carpeta que desees             |
 |ls          |List Lista los archivos y carpetas dentro del directorio que  |selecciones
 |file        |Muestra la información del archivo que selecciones            |
+|echo        |genera un stdout en la terminal con lo que se escriba en comillas|
 
 #### comando ls
 
