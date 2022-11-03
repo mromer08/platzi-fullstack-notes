@@ -1,4 +1,12 @@
 # Cómo se manejan los permisos
+## Tabla de comandos para la clase
+|Comando|Función|
+|-------|-------|
+|whoami |Muesta el usuario con el que se está trabajando|
+|su 	|Switch User Cambia al usuario al que le especifiques|
+|chmod 	|Cambia los permisos de un archivo|
+|chown 	|Change Owner Cambia el propietario de un archivo|
+|passwd |Cambia la contraseña del usuario que se le indique o el actual|
 ## Tipos de archivos
 En la siguiente tabla se hace referencia al primer caracter que se ve al aplicar el comando `ls -l`
 
@@ -63,3 +71,49 @@ Convierte los siguientes permisos a símbolos y en su representación numérica:
 
 Si sientes que necesitas más información puedes preguntar a la comunidad o prácticar en la terminal.
 # Modificando permisos en la terminal
+Con el comando `chmod` (change mod) podemos cambiar los permisos de los archivos de dos formas, una es usando los símbolos (rwx) y otra es con el sistema octal.
+## Cómo cambiar los permisos de un archivo (chmod)
+
+Es bastante sencillo cambiar los permisos de forma simbólica. Para esto, hay que escribir después del comando chmod el símbolo del usuario, luego el operador y por último el permiso que quieres agregar o quitar.
+```
+chmod [simboloDelUsuario][operador][permiso] [archivoParaCambiarSusPermisos]
+```
+|owner|group|others|
+|-----|-----|------|
+|u (de user)| 	g 	|o|
+
+
+|Operador 	|Función|
+|-----------|-------|
+| +	|Añade un permiso|
+| -	|Quita un permiso|
+| =	|Asigna un permiso|
+
+Para hacerlo de forma simbólica pero con varios grupos de usuario a la vez, puede hacerse separandolos por comas. En el siguiente ejemplo se le agregará al usuario el permiso de readable y al de grupo se van a reemplazar sus permisos actuales por solamente el de writable
+```
+$ chmod u+r,g=w [archivo]
+```
+Para hacerlo mediante el sistema octal, simplemente se debe colocar el número correspondiente según la tabla que se mostró anteriormente POR CADA grupo de usuario. En el siguiente ejemplo se le darán permisos rwx(7) al usuario y r-x(5) al mundo y al grupo:
+
+```
+chmod 755 [archivo]
+```
+## Cambiar el propietario (chown)
+Se puede cambiar el propietario de un archivo de la siguiente manera:
+```
+chown [usuarioAlQuePertenecerá] [archivo]
+```
+# Cómo gestionar usuarios (whoami | su)
+Cuando se listan los archivos con el comando `ls -l` la tercera columna muestra el usuario que creó el archivo y la cuarta columna el grupo que tiene control sobre dicho archivo
+```
+-rw-r--r-- 1 manu manu  533 oct 25 19:06 alias.md
+-rw-r--r-- 1 manu manu 4348 nov  2 22:11 archivos-permisos.md
+-rw-r--r-- 1 manu manu 1024 oct 25 18:57 explorando-archivos.md
+```
+# Ejercicios de práctica
+
+Recuerda que si haces mucho desastre puedes borrar casi lo que sea con el usuario root y ten mucho cuidado con lo que borras.
+
+- Crea un archivo llamado “ArchivoPoderoso.txt”, luego dale los permisos r-xrwxr-xr-x usando la forma simbólica del comando chmod.
+- Crea un archivo con el usuario root llamado “pelota.txt”, luego dale los permisos rwxr-x–x usando la forma numérica del comando chmod y luego cambia el propietario a tu usuario principal con chown.
+- Crea un archivo con un nombre bonito y asígnale los permisos --------- usando su forma simbólica.
