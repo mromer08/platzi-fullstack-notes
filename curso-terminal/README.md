@@ -43,3 +43,27 @@ Primeros comandos
 - bandera -l (long): permite visualizar los archivos con más información
 - bandera -h (human): lo mismo que long pero para que lo entienda un humano
 
+# Recomendaciones de libros sobre linux y la terminal
+Linux Basics for Hackers | No Starch Press
+
+https://nostarch.com/linuxbasicsforhackers
+
+The Linux Command Line, 2nd Edition | No Starch Press
+
+https://nostarch.com/tlcl2
+
+grep Pocket Reference
+
+https://www.oreilly.com/library/view/grep-pocket-reference/9780596157005/
+
+Learning the vi and Vim Editors, 7th Edition
+
+https://www.oreilly.com/library/view/learning-the-vi/9780596529833/
+
+Linux Pocket Guide, 3rd Edition
+
+https://www.oreilly.com/library/view/linux-pocket-guide/9781491927557/
+
+Regular Expression Pocket Reference, 2nd Edition
+
+https://www.oreilly.com/library/view/regular-expression-pocket/9780596514273/
