@@ -4,6 +4,7 @@ Algo curioso es el cambio en los terminos de github derivados del movimiento #Bl
 https://platzi.com/blog/cambios-en-github-master-main/
 
 # Comandos básicos de git
+> Utilizar el comando git grep para buscar cosas dentro de los archivos del repo. Explicación a fondo en el archivo de comandos de emergencia.
 
 `git init` : inicializa un repositorio de GIT en la carpeta donde se ejecute el comando.
 `git add` : añade los archivos especificados al área de preparación (staging).
