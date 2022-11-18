@@ -1,0 +1,125 @@
+<!--Exersise about making a card with CSS tools learned by moment-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /*background-color: lightgrey;*/
+            box-sizing: border-box;
+        }
+        section {
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: center;            
+        }
+        .card {            
+            background: papayawhip;
+            width: 500px;
+            height: 830px;
+            border-radius: 30px;
+            overflow: hidden; /*oculta lo que se sale de los límites dados*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .card .photo{
+            height: 400px;
+        }
+        .card img {
+            width: 100%;
+        }
+        .card img:nth-child(2){
+            position: relative;
+            border-radius: 50%;
+            width: 200px;
+            top: -100px;
+            border: 5px white solid;
+
+        }
+        .card .textprofile p:nth-child(1) {
+            font-size: xx-large;
+            text-align: center;
+            font-weight: bold;
+        }
+        .card .textprofile p:nth-child(2) {
+            font-size: medium;
+            text-align: center;
+            color: gray;
+        }
+        .card .resume {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: dodgerblue;
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+        }
+        .follower p:nth-child(2){
+            font-weight: lighter;
+            font-size: smaller;
+            color: gray;
+        }
+        .following p:nth-child(2){
+            font-weight: lighter;
+            font-size: smaller;
+            color: gray;
+        }
+        .card button {
+            width: 80%;
+            height: 60px;
+            border-radius: 30px;
+            background-color: yellowgreen;
+            border: 0;
+            font-family: inherit;
+            font-size: larger;
+            font-weight: bold;
+            
+        }
+        .card .about {
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="photo">
+                <img src="https://i0.wp.com/elpalomitron.com/wp-content/uploads/2018/10/JoJo%E2%80%99s-Bizarre-Adventure-Golden-Wind-1x01-principal-El-Palomitr%C3%B3n.jpg" alt="banner-photo">
+                <img src="https://wallpapercave.com/uwp/uwp1204249.jpeg" alt="profile-photo">
+            </div>
+            <div class="textprofile">
+                <p>Giorno Giovanna</p>
+                <p>I have a dream</p>
+            </div>
+            <div class="resume">
+                <div class="follower">
+                    <p>12</p>
+                    <p>Followers</p>
+                </div>
+                <div class="following">
+                    <p>1000</p>
+                    <p>Following</p>
+                </div>
+            </div>
+            <button>Follow</button>
+            <div class="about">
+                Giorno is the illegitimate son of DIO, conceived with Jonathan Joestar's stolen body. He is introduced as Haruno Shiobana (汐華 初流乃). He speaks of his intention to join the powerful gang Passione and his dream of becoming a "Gang-Star".
+            </div>
+            
+
+        </div>
+    </section>
+</body>
+</html>
